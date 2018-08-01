@@ -5,7 +5,7 @@ importlxml.etree
 
 #createavariablecalled'url'andthenreadwhat'sthere
 url="http://www.staffssaferroads.co.uk/media/114997/03092012_forwebsite.pdf"
-pdf data = urllib2.urlopen(url).read()
+pdfdata = urllib2.urlopen(url).read()
 print "The pdf file has %d bytes" % len(pdfdata)
 
 #converttoxmlandprintsomeinfo
