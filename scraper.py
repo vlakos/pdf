@@ -1,5 +1,5 @@
 #importourlibraries
-importscraper wiki
+import scraperwiki
 import urllib2
 importlxml.etree
 
