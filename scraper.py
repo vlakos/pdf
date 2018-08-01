@@ -13,10 +13,9 @@ pages = list(root)
 print "The pages are numbered:", [ page.attrib.get("number") for page in pages ]
 #thisfunctionhastoworkrecursivelybecausewemighthave"<bPart1<ipart2</i</b"
 def gettext_with_bi_tags(el):
-res = [ ]
-if el.text:
-res.append(el.text)
-Scraper #22: Scraping PDFs part 1 190
+    res = [ ]
+    if el.text:
+        res.append(el.text)
 for lel in el:
     res.append("<%s" % lel.tag) res.append(gettext_with_bi_tags(lel)) res.append("</%s" % lel.tag)
 if el.tail:
