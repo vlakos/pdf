@@ -2,7 +2,7 @@ import scraperwiki
 import urllib2
 import lxml.etree
 
-url="https://www.parliament.uk/documents/lords-committees/house/Minutes/2015-16/HCMinute\s-6-030516.pdf"
+url="http://www.acas.rs/wp-content/uploads/2017/12/Godisnji-plan-provere-za-2018.pdf"
 pdfdata=urllib2.urlopen(url).read()
 print "Thepdffilehas%dbytes"%len(pdfdata)
 xmldata = scraperwiki.pdftoxml(pdfdata)
