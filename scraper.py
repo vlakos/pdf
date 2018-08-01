@@ -17,19 +17,21 @@ def gettext_with_bi_tags(el):
     if el.text:
         res.append(el.text)
 for lel in el:
-    res.append("<%s" % lel.tag) res.append(gettext_with_bi_tags(lel)) res.append("</%s" % lel.tag)
-if el.tail:
-    return "".join(res) 35
+    res.append("<%s" % lel.tag) 
+    res.append(gettext_with_bi_tags(lel)) 
+    res.append("</%s" % lel.tag)
+    if el.tail:
+        return "".join(res) 35
 #printthefirsthundredtextelementsfromthefirstpage
 page0=pages[0]
 ID=0
 for el in list(page0)[:100]:
     print el.tag
-if el.tag == "text":
-    print el.attrib, gettext_with_bi_tags(el)
-record = {}
-record["text"] = gettext_with_bi_tags(el)
-ID = ID+1
-record["ID"] = ID
-scraperwiki.sqlite.save(["ID"],record)
-print record
+    if el.tag == "text":
+        print el.attrib, gettext_with_bi_tags(el)
+        record = {}
+        record["text"] = gettext_with_bi_tags(el)
+        ID = ID+1
+        record["ID"] = ID
+        scraperwiki.sqlite.save(["ID"],record)
+        print record
