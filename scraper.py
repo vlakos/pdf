@@ -17,7 +17,7 @@ root = lxml.etree.fromstring(xmldata)
 lines = root.findall('.//text[@font="5"]')
 print lines
 for line in lines:
-print line.text
+    print line.text
 
 record={} forlineinlines:
     record["date"] = line.text
