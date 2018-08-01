@@ -1,7 +1,7 @@
 #importourlibraries
 import scraperwiki
 import urllib2
-importlxml.etree
+import lxml.etree
 
 #createavariablecalled'url'andthenreadwhat'sthere
 url="http://www.staffssaferroads.co.uk/media/114997/03092012_forwebsite.pdf"
