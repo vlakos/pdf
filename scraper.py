@@ -21,7 +21,7 @@ for lel in el:
     res.append(gettext_with_bi_tags(lel)) 
     res.append("</%s" % lel.tag)
     if el.tail:
-        return "".join(res)
+ return "".join(res)
 #printthefirsthundredtextelementsfromthefirstpage
 page0=pages[0]
 ID=0
