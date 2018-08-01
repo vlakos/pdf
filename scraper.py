@@ -40,6 +40,13 @@ page0 = pages[0]
 for el in list(page0)[:100]:
     if el.tag == "text":
         print el.attrib, gettext_with_bi_tags(el)
+        record = {}
+        record["text"] = gettext_with_bi_tags(el)
+        ID = ID+1
+        record["ID"] = ID
+        craperwiki.sqlite.save(["ID"],record)
+        print record
+
 
 
 # If you have many PDF documents to extract data from, the trick is to find what's similar 
