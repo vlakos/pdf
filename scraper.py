@@ -19,6 +19,7 @@ print lines
 for line in lines:
     print line.text
 
-record={} forlineinlines:
+record = {} 
+for line in lines:
     record["date"] = line.text
     scraperwiki.sqlite.save(['date'], record)
