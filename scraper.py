@@ -17,6 +17,7 @@ print "The first 2000 characters are: ", xmldata[:2000]
 
 root = lxml.etree.fromstring(xmldata)
 pages = list(root)
+print pages
 
 print "The pages are numbered:", [ page.attrib.get("number")  for page in pages ]
 
